@@ -40,14 +40,17 @@ For my solution to be unit tested it would need to implement mocks for the HttpC
 Lambda Function URL
 
 Public url: https://yjhlqi3vvj4hq2sqw265wuw5sq0vxjsy.lambda-url.eu-north-1.on.aws
+
 Endpoint url: https://yjhlqi3vvj4hq2sqw265wuw5sq0vxjsy.lambda-url.eu-north-1.on.aws/api/weather/{name}
 
 Path Parameter: name - the name of the city for which to retrieve weather data
 
 Example Request 1: GET https://yjhlqi3vvj4hq2sqw265wuw5sq0vxjsy.lambda-url.eu-north-1.on.aws/api/weather/Krakow
+
 Example Response 1: {"cityName":"Krakow","currentTemp":26,"currentTime":"2026-05-04T17:15:00","status":"Warm"}
 
 Example Request 2: GET https://yjhlqi3vvj4hq2sqw265wuw5sq0vxjsy.lambda-url.eu-north-1.on.aws/api/weather/Rzeszow
+
 Example Response 2: {"cityName":"Rzeszow","currentTemp":25.5,"currentTime":"2026-05-04T17:30:00","status":"Warm"}
 
 New Weather Provider Added:
