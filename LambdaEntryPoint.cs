@@ -2,7 +2,7 @@ namespace WeatherApiExercise;
 
 public class LambdaEntryPoint :
 
-    Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction
+    Amazon.Lambda.AspNetCoreServer.APIGatewayHttpApiV2ProxyFunction
 {
     protected override void Init(IWebHostBuilder builder)
     {

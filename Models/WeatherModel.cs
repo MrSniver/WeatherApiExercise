@@ -4,7 +4,8 @@ public class WeatherModel: IBaseModel
 {
     public Guid Id { get; set; }
     public string CityName { get; set; }
-    public int CurrentTemp { get; set; }
+    public double CurrentTemp { get; set; }
+    public DateTime CurrentTime { get; set; }
     public TempStatus Status { get; set; }
 
 }

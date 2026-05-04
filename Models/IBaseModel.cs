@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WeatherApiExercise.Models;
+﻿namespace WeatherApiExercise.Models;
 
 public interface IBaseModel
 {

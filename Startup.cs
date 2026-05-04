@@ -1,4 +1,7 @@
-﻿namespace WeatherApiExercise;
+﻿using WeatherApiExercise.Middlewares;
+using WeatherApiExercise.Models;
+
+namespace WeatherApiExercise;
 
 public class Startup
 {
@@ -12,7 +15,12 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddDepencencies();
+        services.AddHttpClient();
+        services.Configure<ApiConfiguration>(Configuration.GetSection("ApiConfigurations"));
         services.AddControllers();
+        services.AddLogging();
+        services.AddTransient<ExceptionHandlingMiddleware>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -22,6 +30,8 @@ public class Startup
         {
             app.UseDeveloperExceptionPage();
         }
+
+        app.UseMiddleware<ExceptionHandlingMiddleware>();
 
         app.UseHttpsRedirection();
 
